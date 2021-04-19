@@ -29,102 +29,197 @@ namespace CollegeManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.StudentPictureBox = new System.Windows.Forms.PictureBox();
-            this.administratorPictureBox = new System.Windows.Forms.PictureBox();
-            this.studentButton = new System.Windows.Forms.Button();
-            this.adminButton = new System.Windows.Forms.Button();
-            this.loginLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize) (this.StudentPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.administratorPictureBox)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.resetLabel = new System.Windows.Forms.Label();
+            this.exitPictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // StudentPictureBox
+            // label1
             // 
-            this.StudentPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.StudentPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.StudentPictureBox.Image = ((System.Drawing.Image) (resources.GetObject("StudentPictureBox.Image")));
-            this.StudentPictureBox.InitialImage = null;
-            this.StudentPictureBox.Location = new System.Drawing.Point(126, 200);
-            this.StudentPictureBox.Name = "StudentPictureBox";
-            this.StudentPictureBox.Size = new System.Drawing.Size(219, 237);
-            this.StudentPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.StudentPictureBox.TabIndex = 0;
-            this.StudentPictureBox.TabStop = false;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(184, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(326, 34);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ADMINISTRATOR LOGIN";
             // 
-            // administratorPictureBox
+            // panel1
             // 
-            this.administratorPictureBox.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("administratorPictureBox.BackgroundImage")));
-            this.administratorPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.administratorPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.administratorPictureBox.Location = new System.Drawing.Point(489, 200);
-            this.administratorPictureBox.Name = "administratorPictureBox";
-            this.administratorPictureBox.Size = new System.Drawing.Size(219, 237);
-            this.administratorPictureBox.TabIndex = 1;
-            this.administratorPictureBox.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.exitPictureBox);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(695, 47);
+            this.panel1.TabIndex = 2;
             // 
-            // studentButton
+            // label2
             // 
-            this.studentButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.studentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.studentButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.studentButton.Location = new System.Drawing.Point(150, 475);
-            this.studentButton.Name = "studentButton";
-            this.studentButton.Size = new System.Drawing.Size(170, 27);
-            this.studentButton.TabIndex = 2;
-            this.studentButton.Text = "STUDENT";
-            this.studentButton.UseVisualStyleBackColor = false;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.GreenYellow;
+            this.label2.Location = new System.Drawing.Point(197, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(301, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "College Management System";
             // 
-            // adminButton
+            // label3
             // 
-            this.adminButton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.adminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.adminButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.adminButton.Location = new System.Drawing.Point(515, 475);
-            this.adminButton.Name = "adminButton";
-            this.adminButton.Size = new System.Drawing.Size(170, 27);
-            this.adminButton.TabIndex = 3;
-            this.adminButton.Text = "ADMINISTRATOR";
-            this.adminButton.UseVisualStyleBackColor = false;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(328, 208);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Name";
             // 
-            // loginLabel
+            // loginButton
             // 
-            this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.loginLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.loginLabel.Location = new System.Drawing.Point(150, 42);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(535, 96);
-            this.loginLabel.TabIndex = 4;
-            this.loginLabel.Text = "Please tell us who you are...!";
-            this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loginButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loginButton.FlatAppearance.BorderSize = 0;
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.loginButton.ForeColor = System.Drawing.Color.GreenYellow;
+            this.loginButton.Location = new System.Drawing.Point(381, 343);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(195, 38);
+            this.loginButton.TabIndex = 2;
+            this.loginButton.Text = "LOGIN";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nameTextBox.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nameTextBox.Location = new System.Drawing.Point(444, 208);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(192, 30);
+            this.nameTextBox.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(328, 271);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 23);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Password";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.passwordTextBox.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.passwordTextBox.Location = new System.Drawing.Point(444, 270);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
+            this.passwordTextBox.Size = new System.Drawing.Size(192, 30);
+            this.passwordTextBox.TabIndex = 1;
+            // 
+            // resetLabel
+            // 
+            this.resetLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.resetLabel.AutoSize = true;
+            this.resetLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetLabel.ForeColor = System.Drawing.Color.Navy;
+            this.resetLabel.Location = new System.Drawing.Point(448, 393);
+            this.resetLabel.Name = "resetLabel";
+            this.resetLabel.Size = new System.Drawing.Size(56, 21);
+            this.resetLabel.TabIndex = 4;
+            this.resetLabel.Text = "Reset";
+            this.resetLabel.Click += new System.EventHandler(this.resetLabel_Click);
+            // 
+            // exitPictureBox
+            // 
+            this.exitPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitPictureBox.Image = global::CollegeManagementSystem.Properties.Resources.close;
+            this.exitPictureBox.Location = new System.Drawing.Point(657, 9);
+            this.exitPictureBox.Name = "exitPictureBox";
+            this.exitPictureBox.Size = new System.Drawing.Size(30, 30);
+            this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitPictureBox.TabIndex = 11;
+            this.exitPictureBox.TabStop = false;
+            this.toolTip1.SetToolTip(this.exitPictureBox, "Exit");
+            this.exitPictureBox.Click += new System.EventHandler(this.exitPictureBox_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::CollegeManagementSystem.Properties.Resources.login;
+            this.pictureBox1.Location = new System.Drawing.Point(63, 182);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(838, 604);
-            this.Controls.Add(this.loginLabel);
-            this.Controls.Add(this.adminButton);
-            this.Controls.Add(this.studentButton);
-            this.Controls.Add(this.administratorPictureBox);
-            this.Controls.Add(this.StudentPictureBox);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(695, 483);
+            this.Controls.Add(this.resetLabel);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            ((System.ComponentModel.ISupportInitialize) (this.StudentPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.administratorPictureBox)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
-        private System.Windows.Forms.Label loginLabel;
-
-        private System.Windows.Forms.Button studentButton;
-        private System.Windows.Forms.Button adminButton;
-
-        private System.Windows.Forms.PictureBox StudentPictureBox;
-        private System.Windows.Forms.PictureBox administratorPictureBox;
-
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Label resetLabel;
+        private System.Windows.Forms.PictureBox exitPictureBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

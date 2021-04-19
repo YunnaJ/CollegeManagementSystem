@@ -29,6 +29,7 @@ namespace CollegeManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.lastNameLabel = new System.Windows.Forms.Label();
             this.genderLabel = new System.Windows.Forms.Label();
@@ -37,6 +38,8 @@ namespace CollegeManagementSystem
             this.addressLabel = new System.Windows.Forms.Label();
             this.courseLabel = new System.Windows.Forms.Label();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.collegeDBDataSet = new CollegeManagementSystem.CollegeDBDataSet();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.genderComboBox = new System.Windows.Forms.ComboBox();
             this.DOBPicker = new System.Windows.Forms.DateTimePicker();
@@ -44,219 +47,379 @@ namespace CollegeManagementSystem
             this.courseTextBox = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
             this.addressRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.resetButton = new System.Windows.Forms.Button();
             this.teacherDataGridView = new System.Windows.Forms.DataGridView();
-            this.loadButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.backPictureBox = new System.Windows.Forms.PictureBox();
+            this.exitPictureBox = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.teachersTableAdapter = new CollegeManagementSystem.CollegeDBDataSetTableAdapters.teachersTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collegeDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstNameLabel
             // 
+            this.firstNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Location = new System.Drawing.Point(96, 28);
+            this.firstNameLabel.BackColor = System.Drawing.Color.White;
+            this.firstNameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameLabel.Location = new System.Drawing.Point(63, 27);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(75, 15);
+            this.firstNameLabel.Size = new System.Drawing.Size(96, 21);
             this.firstNameLabel.TabIndex = 0;
             this.firstNameLabel.Text = "First Name";
             // 
             // lastNameLabel
             // 
+            this.lastNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(427, 28);
+            this.lastNameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameLabel.Location = new System.Drawing.Point(393, 27);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(76, 15);
+            this.lastNameLabel.Size = new System.Drawing.Size(100, 21);
             this.lastNameLabel.TabIndex = 1;
             this.lastNameLabel.Text = "Last Name";
             // 
             // genderLabel
             // 
+            this.genderLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.genderLabel.AutoSize = true;
-            this.genderLabel.Location = new System.Drawing.Point(96, 77);
+            this.genderLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderLabel.Location = new System.Drawing.Point(63, 75);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(54, 15);
+            this.genderLabel.Size = new System.Drawing.Size(74, 21);
             this.genderLabel.TabIndex = 2;
             this.genderLabel.Text = "Gender";
             // 
             // DOBLabel
             // 
+            this.DOBLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DOBLabel.AutoSize = true;
-            this.DOBLabel.Location = new System.Drawing.Point(427, 77);
+            this.DOBLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOBLabel.Location = new System.Drawing.Point(393, 75);
             this.DOBLabel.Name = "DOBLabel";
-            this.DOBLabel.Size = new System.Drawing.Size(92, 15);
+            this.DOBLabel.Size = new System.Drawing.Size(118, 21);
             this.DOBLabel.TabIndex = 3;
             this.DOBLabel.Text = "Date Of Birth";
             // 
             // emailLabel
             // 
+            this.emailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(96, 124);
+            this.emailLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.Location = new System.Drawing.Point(63, 127);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(41, 15);
+            this.emailLabel.Size = new System.Drawing.Size(52, 21);
             this.emailLabel.TabIndex = 4;
             this.emailLabel.Text = "Email";
             // 
             // addressLabel
             // 
+            this.addressLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(427, 124);
+            this.addressLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLabel.Location = new System.Drawing.Point(393, 126);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(60, 15);
+            this.addressLabel.Size = new System.Drawing.Size(77, 21);
             this.addressLabel.TabIndex = 5;
             this.addressLabel.Text = "Address";
             // 
             // courseLabel
             // 
+            this.courseLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.courseLabel.AutoSize = true;
-            this.courseLabel.Location = new System.Drawing.Point(96, 178);
+            this.courseLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.courseLabel.Location = new System.Drawing.Point(63, 181);
             this.courseLabel.Name = "courseLabel";
-            this.courseLabel.Size = new System.Drawing.Size(54, 15);
+            this.courseLabel.Size = new System.Drawing.Size(68, 21);
             this.courseLabel.TabIndex = 6;
             this.courseLabel.Text = "Course";
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(194, 28);
+            this.firstNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.firstNameTextBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.firstNameTextBox.Location = new System.Drawing.Point(175, 26);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(100, 25);
-            this.firstNameTextBox.TabIndex = 7;
+            this.firstNameTextBox.Size = new System.Drawing.Size(163, 27);
+            this.firstNameTextBox.TabIndex = 0;
+            // 
+            // teachersBindingSource
+            // 
+            this.teachersBindingSource.DataMember = "teachers";
+            this.teachersBindingSource.DataSource = this.collegeDBDataSet;
+            // 
+            // collegeDBDataSet
+            // 
+            this.collegeDBDataSet.DataSetName = "CollegeDBDataSet";
+            this.collegeDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(520, 17);
+            this.lastNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lastNameTextBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lastNameTextBox.Location = new System.Drawing.Point(519, 25);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(100, 25);
-            this.lastNameTextBox.TabIndex = 8;
+            this.lastNameTextBox.Size = new System.Drawing.Size(163, 27);
+            this.lastNameTextBox.TabIndex = 1;
             // 
             // genderComboBox
             // 
+            this.genderComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.genderComboBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.genderComboBox.FormattingEnabled = true;
             this.genderComboBox.Items.AddRange(new object[] {
             "Female",
             "Male"});
-            this.genderComboBox.Location = new System.Drawing.Point(205, 77);
+            this.genderComboBox.Location = new System.Drawing.Point(175, 74);
             this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Size = new System.Drawing.Size(121, 23);
-            this.genderComboBox.TabIndex = 9;
+            this.genderComboBox.Size = new System.Drawing.Size(163, 25);
+            this.genderComboBox.TabIndex = 2;
             // 
             // DOBPicker
             // 
-            this.DOBPicker.Location = new System.Drawing.Point(520, 73);
+            this.DOBPicker.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DOBPicker.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.DOBPicker.Location = new System.Drawing.Point(519, 74);
             this.DOBPicker.Name = "DOBPicker";
-            this.DOBPicker.Size = new System.Drawing.Size(251, 25);
-            this.DOBPicker.TabIndex = 10;
+            this.DOBPicker.Size = new System.Drawing.Size(260, 27);
+            this.DOBPicker.TabIndex = 3;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(205, 113);
+            this.emailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.emailTextBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.emailTextBox.Location = new System.Drawing.Point(175, 126);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(100, 25);
-            this.emailTextBox.TabIndex = 11;
+            this.emailTextBox.Size = new System.Drawing.Size(163, 27);
+            this.emailTextBox.TabIndex = 4;
             // 
             // courseTextBox
             // 
-            this.courseTextBox.Location = new System.Drawing.Point(194, 167);
+            this.courseTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.courseTextBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.courseTextBox.Location = new System.Drawing.Point(175, 180);
             this.courseTextBox.Name = "courseTextBox";
-            this.courseTextBox.Size = new System.Drawing.Size(100, 25);
-            this.courseTextBox.TabIndex = 13;
+            this.courseTextBox.Size = new System.Drawing.Size(163, 27);
+            this.courseTextBox.TabIndex = 6;
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(146, 217);
+            this.saveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.saveButton.BackColor = System.Drawing.Color.GreenYellow;
+            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.ForeColor = System.Drawing.Color.Black;
+            this.saveButton.Location = new System.Drawing.Point(217, 244);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
-            this.saveButton.TabIndex = 14;
+            this.saveButton.Size = new System.Drawing.Size(94, 47);
+            this.saveButton.TabIndex = 7;
             this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(351, 217);
+            this.editButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.editButton.BackColor = System.Drawing.Color.GreenYellow;
+            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButton.FlatAppearance.BorderSize = 0;
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.Location = new System.Drawing.Point(317, 244);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(75, 23);
-            this.editButton.TabIndex = 15;
+            this.editButton.Size = new System.Drawing.Size(94, 47);
+            this.editButton.TabIndex = 8;
             this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.Location = new System.Drawing.Point(482, 217);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 23);
-            this.deleteButton.TabIndex = 16;
-            this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
             // 
             // addressRichTextBox
             // 
-            this.addressRichTextBox.Location = new System.Drawing.Point(520, 124);
+            this.addressRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addressRichTextBox.Location = new System.Drawing.Point(519, 126);
             this.addressRichTextBox.Name = "addressRichTextBox";
-            this.addressRichTextBox.Size = new System.Drawing.Size(188, 86);
-            this.addressRichTextBox.TabIndex = 17;
+            this.addressRichTextBox.Size = new System.Drawing.Size(260, 86);
+            this.addressRichTextBox.TabIndex = 5;
             this.addressRichTextBox.Text = "";
-            // 
-            // resetButton
-            // 
-            this.resetButton.Location = new System.Drawing.Point(646, 228);
-            this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(75, 23);
-            this.resetButton.TabIndex = 18;
-            this.resetButton.Text = "Reset";
-            this.resetButton.UseVisualStyleBackColor = true;
             // 
             // teacherDataGridView
             // 
+            this.teacherDataGridView.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.teacherDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.teacherDataGridView.Location = new System.Drawing.Point(56, 273);
+            this.teacherDataGridView.Location = new System.Drawing.Point(16, 341);
             this.teacherDataGridView.Name = "teacherDataGridView";
             this.teacherDataGridView.RowHeadersWidth = 51;
             this.teacherDataGridView.RowTemplate.Height = 27;
-            this.teacherDataGridView.Size = new System.Drawing.Size(665, 200);
+            this.teacherDataGridView.Size = new System.Drawing.Size(827, 241);
             this.teacherDataGridView.TabIndex = 19;
+            this.teacherDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.teacherDataGridView_CellClick);
             // 
-            // loadButton
+            // panel1
             // 
-            this.loadButton.Location = new System.Drawing.Point(350, 167);
-            this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(75, 23);
-            this.loadButton.TabIndex = 20;
-            this.loadButton.Text = "Load";
-            this.loadButton.UseVisualStyleBackColor = true;
-            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.backPictureBox);
+            this.panel1.Controls.Add(this.exitPictureBox);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(865, 47);
+            this.panel1.TabIndex = 21;
+            // 
+            // backPictureBox
+            // 
+            this.backPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backPictureBox.Image = global::CollegeManagementSystem.Properties.Resources.logout;
+            this.backPictureBox.Location = new System.Drawing.Point(778, 8);
+            this.backPictureBox.Name = "backPictureBox";
+            this.backPictureBox.Size = new System.Drawing.Size(30, 30);
+            this.backPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backPictureBox.TabIndex = 12;
+            this.backPictureBox.TabStop = false;
+            this.toolTip1.SetToolTip(this.backPictureBox, "Go back to Menu");
+            this.backPictureBox.Click += new System.EventHandler(this.backPictureBox_Click);
+            // 
+            // exitPictureBox
+            // 
+            this.exitPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.exitPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitPictureBox.Image = global::CollegeManagementSystem.Properties.Resources.close;
+            this.exitPictureBox.Location = new System.Drawing.Point(823, 8);
+            this.exitPictureBox.Name = "exitPictureBox";
+            this.exitPictureBox.Size = new System.Drawing.Size(30, 30);
+            this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitPictureBox.TabIndex = 11;
+            this.exitPictureBox.TabStop = false;
+            this.toolTip1.SetToolTip(this.exitPictureBox, "Exit");
+            this.exitPictureBox.Click += new System.EventHandler(this.exitPictureBox_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Teachers Management";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.idTextBox);
+            this.panel2.Controls.Add(this.resetButton);
+            this.panel2.Controls.Add(this.firstNameTextBox);
+            this.panel2.Controls.Add(this.deleteButton);
+            this.panel2.Controls.Add(this.genderComboBox);
+            this.panel2.Controls.Add(this.emailTextBox);
+            this.panel2.Controls.Add(this.courseTextBox);
+            this.panel2.Controls.Add(this.lastNameTextBox);
+            this.panel2.Controls.Add(this.editButton);
+            this.panel2.Controls.Add(this.addressRichTextBox);
+            this.panel2.Controls.Add(this.saveButton);
+            this.panel2.Controls.Add(this.DOBPicker);
+            this.panel2.Controls.Add(this.courseLabel);
+            this.panel2.Controls.Add(this.lastNameLabel);
+            this.panel2.Controls.Add(this.emailLabel);
+            this.panel2.Controls.Add(this.addressLabel);
+            this.panel2.Controls.Add(this.genderLabel);
+            this.panel2.Controls.Add(this.DOBLabel);
+            this.panel2.Controls.Add(this.firstNameLabel);
+            this.panel2.Location = new System.Drawing.Point(16, 44);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(827, 299);
+            this.panel2.TabIndex = 24;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Enabled = false;
+            this.idTextBox.Location = new System.Drawing.Point(67, 244);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(100, 25);
+            this.idTextBox.TabIndex = 11;
+            // 
+            // resetButton
+            // 
+            this.resetButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.resetButton.BackColor = System.Drawing.Color.GreenYellow;
+            this.resetButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetButton.FlatAppearance.BorderSize = 0;
+            this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetButton.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.ForeColor = System.Drawing.Color.Black;
+            this.resetButton.Location = new System.Drawing.Point(519, 244);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(94, 47);
+            this.resetButton.TabIndex = 10;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteButton.BackColor = System.Drawing.Color.GreenYellow;
+            this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteButton.FlatAppearance.BorderSize = 0;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.ForeColor = System.Drawing.Color.Black;
+            this.deleteButton.Location = new System.Drawing.Point(417, 244);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(94, 47);
+            this.deleteButton.TabIndex = 9;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // teachersTableAdapter
+            // 
+            this.teachersTableAdapter.ClearBeforeFill = true;
             // 
             // TeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 485);
-            this.Controls.Add(this.loadButton);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(865, 594);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.teacherDataGridView);
-            this.Controls.Add(this.resetButton);
-            this.Controls.Add(this.addressRichTextBox);
-            this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.editButton);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.courseTextBox);
-            this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.DOBPicker);
-            this.Controls.Add(this.genderComboBox);
-            this.Controls.Add(this.lastNameTextBox);
-            this.Controls.Add(this.firstNameTextBox);
-            this.Controls.Add(this.courseLabel);
-            this.Controls.Add(this.addressLabel);
-            this.Controls.Add(this.emailLabel);
-            this.Controls.Add(this.DOBLabel);
-            this.Controls.Add(this.genderLabel);
-            this.Controls.Add(this.lastNameLabel);
-            this.Controls.Add(this.firstNameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TeacherForm";
             this.Text = "TeacherForm";
+            this.Load += new System.EventHandler(this.TeacherForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collegeDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitPictureBox)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -277,10 +440,20 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.TextBox courseTextBox;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button editButton;
-        private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.RichTextBox addressRichTextBox;
-        private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.DataGridView teacherDataGridView;
-        private System.Windows.Forms.Button loadButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox exitPictureBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox backPictureBox;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button resetButton;
+        private CollegeDBDataSet collegeDBDataSet;
+        private System.Windows.Forms.BindingSource teachersBindingSource;
+        private CollegeDBDataSetTableAdapters.teachersTableAdapter teachersTableAdapter;
+        private System.Windows.Forms.TextBox idTextBox;
     }
 }
