@@ -1,7 +1,14 @@
-﻿using System;
+﻿/** Application Purpose: A form to pay student fees 
+* Author: Sukhmanpreet Singh 200460404
+* Date: 20/4/2021
+* Time: 6:13PM
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +22,81 @@ namespace CollegeManagementSystem
         public FeesForm()
         {
             InitializeComponent();
+        }
+        
+        OleDbConnection connect = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\CollegeDB.accdb; Persist Security Info=True");
+        
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+            
+            if (studentIDtext.Text != "")
+            {
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connect;
+
+                command.CommandText = " select firstname from students where ID = " + studentIDtext.Text + "";
+            
+                OleDbDataAdapter da = new OleDbDataAdapter(command);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                if (ds.Tables[0].Rows.Count!= 0)
+                {
+                    studentNameText.Text = ds.Tables[0].Rows[0][0].ToString(); 
+                }
+                else
+                {
+                    studentNameText.Text = "";
+                }
+                
+            }
+            else
+            {
+                studentIDtext.Text = "";
+                studentNameText.Text = "";
+                feesTextBox.Text = "";
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = connect;
+
+            cmd.CommandText = " select * from fees where ID = " + studentIDtext.Text + "";
+            
+            OleDbDataAdapter DA = new OleDbDataAdapter(cmd);
+            DataSet DS = new DataSet();
+            DA.Fill(DS);
+
+            if (DS.Tables[0].Rows.Count == 0)
+            {
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connect;
+
+                command.CommandText = "insert into fees(ID,amount) values (" + studentIDtext.Text + "," + feesTextBox.Text + ")";
+                OleDbDataAdapter da = new OleDbDataAdapter(command);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                if (MessageBox.Show("Fees Submition Successfull.","Success", MessageBoxButtons.OK,MessageBoxIcon.Asterisk) == DialogResult.OK)
+                {
+                    studentIDtext.Text = "";
+                    studentNameText.Text = "";
+                    feesTextBox.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fees has already submitted.");
+                studentIDtext.Text = "";
+                studentNameText.Text = "";
+                feesTextBox.Text = "";
+            }
         }
     }
 }

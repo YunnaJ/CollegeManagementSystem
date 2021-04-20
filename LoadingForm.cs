@@ -1,4 +1,10 @@
-﻿using System;
+﻿/** Application Purpose: A loading page with progressbar
+* Author: Sukhmanpreet Singh 200460404
+* Date: 20/4/2021
+* Time: 6:13PM
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
