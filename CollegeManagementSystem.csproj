@@ -123,6 +123,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherForm.resx">
       <DependentUpon>TeacherForm.cs</DependentUpon>
       <SubType>Designer</SubType>
