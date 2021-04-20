@@ -112,7 +112,7 @@ namespace CollegeManagementSystem
                 //bottom
                 command.Parameters.AddWithValue("@address", richTextBox1.Text);
                 //misc 
-                if(isIDboxempty()) idbox.Text = RandomStudentID().ToString();
+                if(isIDboxempty()) idbox.Text = RandomStudentID().ToString();// if ID text box is left blank it'll auto gen one
                 command.Parameters.AddWithValue("@ID", idbox.Text);
 
                 command.ExecuteNonQuery();
