@@ -45,18 +45,18 @@ namespace CollegeManagementSystem
 
                 if (ds.Tables[0].Rows.Count!= 0)
                 {
-                    studentNameText.Text = ds.Tables[0].Rows[0][0].ToString(); 
+                    label5.Text = ds.Tables[0].Rows[0][0].ToString(); 
                 }
                 else
                 {
-                    studentNameText.Text = "";
+                    label5.Text = "";
                 }
                 
             }
             else
             {
                 studentIDtext.Text = "";
-                studentNameText.Text = "";
+                label5.Text = "________";
                 feesTextBox.Text = "";
             }
 
@@ -86,7 +86,7 @@ namespace CollegeManagementSystem
                 if (MessageBox.Show("Fees Submition Successfull.","Success", MessageBoxButtons.OK,MessageBoxIcon.Asterisk) == DialogResult.OK)
                 {
                     studentIDtext.Text = "";
-                    studentNameText.Text = "";
+                    label5.Text = "________";
                     feesTextBox.Text = "";
                 }
             }
@@ -94,7 +94,7 @@ namespace CollegeManagementSystem
             {
                 MessageBox.Show("Fees has already submitted.");
                 studentIDtext.Text = "";
-                studentNameText.Text = "";
+                label5.Text = "________";
                 feesTextBox.Text = "";
             }
         }
