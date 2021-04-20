@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.OleDb;
@@ -97,7 +97,8 @@ namespace CollegeManagementSystem
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 //command for sql
-                command.CommandText = "Insert into students (ID, firstName, lastName, gender, DateOfBirth, email, address, course, startdata) Values (@ID, @firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course, @startdata)";
+                command.CommandText = "Insert into students (ID, firstName, lastName, gender, DateOfBirth, email, address, course, startData) Values (@ID, @firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course, @startData)";
+                //NO ID CODE//command.CommandText = "Insert into students (firstName, lastName, gender, DateOfBirth, email, address, course, startData) Values (@firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course, @startData)";
                 //fill parameters
                 //right
                 command.Parameters.AddWithValue("@firstName", fNameBox.Text);
@@ -105,14 +106,14 @@ namespace CollegeManagementSystem
                 command.Parameters.AddWithValue("@email", email.Text);
                 command.Parameters.AddWithValue("@DateOfBirth", dobpicker.Value.Date);
                 //left
-                command.Parameters.AddWithValue("@startdata", startdatapicker.Value.Date);
+                command.Parameters.AddWithValue("@startData", startdatapicker.Value.Date);
                 command.Parameters.AddWithValue("@gender", genderBox.Text);
                 command.Parameters.AddWithValue("@course", enrolledprogramBox.Text);
                 //command.Parameters.AddWithValue("@Status", Status.Text);//not in use 
                 //bottom
                 command.Parameters.AddWithValue("@address", richTextBox1.Text);
-                //misc 
-                if(isIDboxempty()) idbox.Text = RandomStudentID().ToString();// if ID text box is left blank it'll auto gen one
+                //misc //Take out the 2 lines below IF NO ID
+                if(isIDboxempty()) idbox.Text = RandomStudentID().ToString();
                 command.Parameters.AddWithValue("@ID", idbox.Text);
 
                 command.ExecuteNonQuery();
@@ -146,6 +147,7 @@ namespace CollegeManagementSystem
                         + "', email = '" + email.Text
                         + "', address = '" + richTextBox1.Text
                         + "', course = '" + enrolledprogramBox.Text
+                        + "', startDate = '" + startdatapicker.Value.Date
                         + "' WHERE ID = "
                         + idbox.Text + "";
 
@@ -172,7 +174,7 @@ namespace CollegeManagementSystem
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = connection;
                     //command code
-                    command.CommandText = "DELETE FROM teachers WHERE ID = "
+                    command.CommandText = "DELETE FROM students WHERE ID = "
                         + idbox.Text + "";
 
                     command.ExecuteNonQuery();
