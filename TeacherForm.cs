@@ -33,7 +33,10 @@ namespace CollegeManagementSystem
         {
             try
             {
-                connection.Open();
+                if (!connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Open();
+                }
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 command.CommandText = "Select * from teachers";
@@ -57,7 +60,10 @@ namespace CollegeManagementSystem
             try
             {
                 // Open the connection
-                connection.Open();
+                if(!connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Open();
+                }
                 // Make a command object
                 OleDbCommand command = new OleDbCommand();
                 // Connect the command object to the database
@@ -98,7 +104,10 @@ namespace CollegeManagementSystem
             try
             {
                 // Open the connection
-                connection.Open();
+                if (!connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Open();
+                }
                 // Make a command object
                 OleDbCommand command = new OleDbCommand();
                 // Connect the command object to the database
@@ -129,7 +138,10 @@ namespace CollegeManagementSystem
             try
             {
                 // Open the connection
-                connection.Open();
+                if (!connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Open();
+                }
                 // Make a command object
                 OleDbCommand command = new OleDbCommand();
                 // Connect the command object to the database

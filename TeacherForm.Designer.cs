@@ -75,7 +75,7 @@ namespace CollegeManagementSystem
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.BackColor = System.Drawing.Color.White;
             this.firstNameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameLabel.Location = new System.Drawing.Point(63, 27);
+            this.firstNameLabel.Location = new System.Drawing.Point(63, 25);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(96, 21);
             this.firstNameLabel.TabIndex = 0;
@@ -86,7 +86,7 @@ namespace CollegeManagementSystem
             this.lastNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameLabel.Location = new System.Drawing.Point(393, 27);
+            this.lastNameLabel.Location = new System.Drawing.Point(393, 25);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(100, 21);
             this.lastNameLabel.TabIndex = 1;
@@ -97,7 +97,7 @@ namespace CollegeManagementSystem
             this.genderLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.genderLabel.AutoSize = true;
             this.genderLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genderLabel.Location = new System.Drawing.Point(63, 75);
+            this.genderLabel.Location = new System.Drawing.Point(63, 73);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(74, 21);
             this.genderLabel.TabIndex = 2;
@@ -108,7 +108,7 @@ namespace CollegeManagementSystem
             this.DOBLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DOBLabel.AutoSize = true;
             this.DOBLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOBLabel.Location = new System.Drawing.Point(393, 75);
+            this.DOBLabel.Location = new System.Drawing.Point(393, 73);
             this.DOBLabel.Name = "DOBLabel";
             this.DOBLabel.Size = new System.Drawing.Size(118, 21);
             this.DOBLabel.TabIndex = 3;
@@ -119,7 +119,7 @@ namespace CollegeManagementSystem
             this.emailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(63, 127);
+            this.emailLabel.Location = new System.Drawing.Point(63, 125);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(52, 21);
             this.emailLabel.TabIndex = 4;
@@ -130,7 +130,7 @@ namespace CollegeManagementSystem
             this.addressLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addressLabel.AutoSize = true;
             this.addressLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressLabel.Location = new System.Drawing.Point(393, 126);
+            this.addressLabel.Location = new System.Drawing.Point(393, 124);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(77, 21);
             this.addressLabel.TabIndex = 5;
@@ -141,7 +141,7 @@ namespace CollegeManagementSystem
             this.courseLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.courseLabel.AutoSize = true;
             this.courseLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courseLabel.Location = new System.Drawing.Point(63, 181);
+            this.courseLabel.Location = new System.Drawing.Point(63, 179);
             this.courseLabel.Name = "courseLabel";
             this.courseLabel.Size = new System.Drawing.Size(68, 21);
             this.courseLabel.TabIndex = 6;
@@ -151,7 +151,7 @@ namespace CollegeManagementSystem
             // 
             this.firstNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstNameTextBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.firstNameTextBox.Location = new System.Drawing.Point(175, 26);
+            this.firstNameTextBox.Location = new System.Drawing.Point(175, 24);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(163, 27);
             this.firstNameTextBox.TabIndex = 0;
@@ -170,7 +170,7 @@ namespace CollegeManagementSystem
             // 
             this.lastNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastNameTextBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lastNameTextBox.Location = new System.Drawing.Point(519, 25);
+            this.lastNameTextBox.Location = new System.Drawing.Point(519, 23);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(163, 27);
             this.lastNameTextBox.TabIndex = 1;
@@ -183,7 +183,7 @@ namespace CollegeManagementSystem
             this.genderComboBox.Items.AddRange(new object[] {
             "Female",
             "Male"});
-            this.genderComboBox.Location = new System.Drawing.Point(175, 74);
+            this.genderComboBox.Location = new System.Drawing.Point(175, 72);
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(163, 25);
             this.genderComboBox.TabIndex = 2;
@@ -192,7 +192,7 @@ namespace CollegeManagementSystem
             // 
             this.DOBPicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DOBPicker.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DOBPicker.Location = new System.Drawing.Point(519, 74);
+            this.DOBPicker.Location = new System.Drawing.Point(519, 72);
             this.DOBPicker.Name = "DOBPicker";
             this.DOBPicker.Size = new System.Drawing.Size(260, 27);
             this.DOBPicker.TabIndex = 3;
@@ -201,7 +201,7 @@ namespace CollegeManagementSystem
             // 
             this.emailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.emailTextBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.emailTextBox.Location = new System.Drawing.Point(175, 126);
+            this.emailTextBox.Location = new System.Drawing.Point(175, 124);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(163, 27);
             this.emailTextBox.TabIndex = 4;
@@ -210,7 +210,7 @@ namespace CollegeManagementSystem
             // 
             this.courseTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.courseTextBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.courseTextBox.Location = new System.Drawing.Point(175, 180);
+            this.courseTextBox.Location = new System.Drawing.Point(175, 178);
             this.courseTextBox.Name = "courseTextBox";
             this.courseTextBox.Size = new System.Drawing.Size(163, 27);
             this.courseTextBox.TabIndex = 6;
@@ -224,7 +224,7 @@ namespace CollegeManagementSystem
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(217, 244);
+            this.saveButton.Location = new System.Drawing.Point(217, 242);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(94, 47);
             this.saveButton.TabIndex = 7;
@@ -240,7 +240,7 @@ namespace CollegeManagementSystem
             this.editButton.FlatAppearance.BorderSize = 0;
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editButton.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.Location = new System.Drawing.Point(317, 244);
+            this.editButton.Location = new System.Drawing.Point(317, 242);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(94, 47);
             this.editButton.TabIndex = 8;
@@ -251,7 +251,7 @@ namespace CollegeManagementSystem
             // addressRichTextBox
             // 
             this.addressRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addressRichTextBox.Location = new System.Drawing.Point(519, 126);
+            this.addressRichTextBox.Location = new System.Drawing.Point(519, 124);
             this.addressRichTextBox.Name = "addressRichTextBox";
             this.addressRichTextBox.Size = new System.Drawing.Size(260, 86);
             this.addressRichTextBox.TabIndex = 5;
@@ -345,9 +345,9 @@ namespace CollegeManagementSystem
             this.panel2.Controls.Add(this.genderLabel);
             this.panel2.Controls.Add(this.DOBLabel);
             this.panel2.Controls.Add(this.firstNameLabel);
-            this.panel2.Location = new System.Drawing.Point(16, 44);
+            this.panel2.Location = new System.Drawing.Point(16, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(827, 299);
+            this.panel2.Size = new System.Drawing.Size(827, 294);
             this.panel2.TabIndex = 24;
             this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
@@ -368,7 +368,7 @@ namespace CollegeManagementSystem
             this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resetButton.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetButton.ForeColor = System.Drawing.Color.Black;
-            this.resetButton.Location = new System.Drawing.Point(519, 244);
+            this.resetButton.Location = new System.Drawing.Point(519, 242);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(94, 47);
             this.resetButton.TabIndex = 10;
@@ -385,7 +385,7 @@ namespace CollegeManagementSystem
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.Black;
-            this.deleteButton.Location = new System.Drawing.Point(417, 244);
+            this.deleteButton.Location = new System.Drawing.Point(417, 242);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(94, 47);
             this.deleteButton.TabIndex = 9;
