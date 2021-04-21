@@ -16,8 +16,8 @@ namespace CollegeManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentForm());
-            //Application.Run(new StudentForm());//set for Avi's debug
+            //Application.Run(new LoadingForm());
+            Application.Run(new StudentForm());//set for Avi's debug
 
         }
     }
