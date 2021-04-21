@@ -43,7 +43,7 @@ namespace CollegeManagementSystem
             // 
             this.label1.Font = new System.Drawing.Font("Script MT Bold", 72F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(140, 21);
+            this.label1.Location = new System.Drawing.Point(79, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(548, 125);
             this.label1.TabIndex = 0;
@@ -82,7 +82,7 @@ namespace CollegeManagementSystem
             // 
             // studentIDtext
             // 
-            this.studentIDtext.Location = new System.Drawing.Point(477, 219);
+            this.studentIDtext.Location = new System.Drawing.Point(400, 219);
             this.studentIDtext.Name = "studentIDtext";
             this.studentIDtext.Size = new System.Drawing.Size(227, 22);
             this.studentIDtext.TabIndex = 4;
@@ -90,7 +90,7 @@ namespace CollegeManagementSystem
             // 
             // feesTextBox
             // 
-            this.feesTextBox.Location = new System.Drawing.Point(477, 370);
+            this.feesTextBox.Location = new System.Drawing.Point(400, 370);
             this.feesTextBox.Name = "feesTextBox";
             this.feesTextBox.Size = new System.Drawing.Size(227, 22);
             this.feesTextBox.TabIndex = 6;
@@ -98,7 +98,7 @@ namespace CollegeManagementSystem
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button1.Location = new System.Drawing.Point(364, 492);
+            this.button1.Location = new System.Drawing.Point(309, 488);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 25);
             this.button1.TabIndex = 7;
@@ -108,7 +108,7 @@ namespace CollegeManagementSystem
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(477, 296);
+            this.label5.Location = new System.Drawing.Point(400, 302);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(227, 23);
             this.label5.TabIndex = 8;
@@ -118,7 +118,7 @@ namespace CollegeManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 588);
+            this.ClientSize = new System.Drawing.Size(720, 536);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.feesTextBox);
@@ -129,6 +129,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Name = "FeesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FeesForm";
             this.ResumeLayout(false);
             this.PerformLayout();
