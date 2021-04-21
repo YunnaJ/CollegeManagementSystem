@@ -87,7 +87,7 @@ namespace CollegeManagementSystem
         }
         private bool isIDboxempty()//function to check if ID box is null or not
         {
-            if (idbox.Text == "")
+            if (idbox.Text == "" || idbox.Text == " ")
                 return true;
             return false;
         }

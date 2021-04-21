@@ -110,7 +110,7 @@ namespace CollegeManagementSystem
             // 
             // logOutButton
             // 
-            this.logOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.logOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.logOutButton.ForeColor = System.Drawing.SystemColors.Highlight;
             this.logOutButton.Location = new System.Drawing.Point(346, 562);
             this.logOutButton.Name = "logOutButton";

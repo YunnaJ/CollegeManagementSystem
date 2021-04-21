@@ -1,10 +1,4 @@
-﻿/** Application Purpose: This form is the gate way to every management form 
-* Author: Sukhmanpreet Singh 200460404
-* Date: 20/4/2021
-* Time: 6:13PM
-*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

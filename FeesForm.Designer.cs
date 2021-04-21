@@ -29,6 +29,7 @@ namespace CollegeManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -130,24 +131,9 @@ namespace CollegeManagementSystem
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Name = "FeesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+
             this.Text = "FeesForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
         }
-
-        private System.Windows.Forms.Label label5;
-
-        private System.Windows.Forms.Button button1;
-
-        private System.Windows.Forms.TextBox studentIDtext;
-        private System.Windows.Forms.TextBox feesTextBox;
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-
-        private System.Windows.Forms.Label label2;
-
-        private System.Windows.Forms.Label label1;
 
         #endregion
     }
