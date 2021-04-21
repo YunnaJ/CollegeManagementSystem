@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.OleDb;
@@ -40,28 +40,31 @@ namespace CollegeManagementSystem
         }
         private void setTable()// function to set up the table
         {
+
             try
             {
-                if (!connection.State.Equals(ConnectionState.Open)) connection.Open();
-
+                if (!connection.State.Equals(ConnectionState.Open))
+                {
+                    connection.Open();
+                }
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                //command for sql
                 command.CommandText = "Select * from students";
 
-                OleDbDataAdapter adapter = new OleDbDataAdapter(command);
-                DataTable Table = new DataTable();
-                //fill
-                adapter.Fill(Table);
-                dataview.DataSource = Table;
-
-                //close
+                OleDbDataAdapter da = new OleDbDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataview.DataSource = dt;
                 connection.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex);//Error check
+                MessageBox.Show("Error" + ex);
+                connection.Close();// if fatel it should still close
+
             }
+
+
         }
         private int RandomStudentID()// makes a random num 16 long
         {
@@ -84,7 +87,7 @@ namespace CollegeManagementSystem
         }
         private bool isIDboxempty()//function to check if ID box is null or not
         {
-            if (idbox.Text == null)
+            if (idbox.Text == "")
                 return true;
             return false;
         }
@@ -97,34 +100,47 @@ namespace CollegeManagementSystem
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 //command for sql
+<<<<<<< HEAD
                 //command.CommandText = "Insert into students (ID, firstName, lastName, gender, DateOfBirth, email, address, course, startDate) Values (@ID, @firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course, @startDate)";
                 //NO ID CODE
                 command.CommandText = "Insert into students (firstName, lastName, gender, DateOfBirth, email, address, course, startDate) Values (@firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course, @startDate)";
+=======
+                command.CommandText = "Insert into students (firstName, lastName, gender, DateOfBirth, email, address, course, startDate) Values (@firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course,'2020-09-14')";
+                //command.CommandText = "Insert into students (firstName) Values (@firstName)";//Test
+
+>>>>>>> e8edcac9a550ba6ebd8877c2a36cfa216a6e2d48
                 //fill parameters
-                //right
                 command.Parameters.AddWithValue("@firstName", fNameBox.Text);
                 command.Parameters.AddWithValue("@lastName", lNameBox.Text);
                 command.Parameters.AddWithValue("@email", EmailBox.Text);
                 command.Parameters.AddWithValue("@DateOfBirth", dobpicker.Value.Date);
+<<<<<<< HEAD
                 //left
                 command.Parameters.AddWithValue("@startDate", startdatapicker.Value.Date);
+=======
+                //command.Parameters.AddWithValue("@startDate", startdatapicker.Value.Date);//Test
+>>>>>>> e8edcac9a550ba6ebd8877c2a36cfa216a6e2d48
                 command.Parameters.AddWithValue("@gender", genderBox.Text);
                 command.Parameters.AddWithValue("@course", enrolledprogramBox.Text);
-                //command.Parameters.AddWithValue("@Status", Status.Text);//not in use 
-                //bottom
                 command.Parameters.AddWithValue("@address", richTextBox1.Text);
+<<<<<<< HEAD
                 //misc //Take out the 2 lines below IF NO ID
                 //if (isIDboxempty()) idbox.Text = RandomStudentID().ToString();
                 //int id = Convert.ToInt32(idbox.Text);
                 //command.Parameters.AddWithValue("@ID", id);
+=======
+
+>>>>>>> e8edcac9a550ba6ebd8877c2a36cfa216a6e2d48
 
                 command.ExecuteNonQuery();
                 connection.Close();
+                MessageBox.Show("Successfully Added");
                 setTable();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
+                connection.Close();//so you can try again
             }
         }
 
@@ -154,12 +170,14 @@ namespace CollegeManagementSystem
                         + idbox.Text + "";
 
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Successfully Edited");
                     connection.Close();
+                    MessageBox.Show("Successfully Edited");
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error" + ex);
+                    connection.Close();//so you can try again
                 }
             }
         }
@@ -167,7 +185,7 @@ namespace CollegeManagementSystem
         private void deletebutton_Click(object sender, EventArgs e)//deletes the student
         {
             if (isIDboxempty())
-                MessageBox.Show("Error: ", "Enter student ID(Top left)");
+                MessageBox.Show("Enter student ID(Top left)", "Error");
             else
             {
                 try
@@ -180,12 +198,15 @@ namespace CollegeManagementSystem
                         + idbox.Text + "";
 
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Successfully Deleted");
                     connection.Close();
+                    MessageBox.Show("Successfully Deleted");
+                    setTable();
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error" + ex);
+                    connection.Close();//so you can try again
                 }
             }
         }
