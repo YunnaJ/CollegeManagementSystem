@@ -35,6 +35,8 @@ namespace CollegeManagementSystem
             this.labelID = new System.Windows.Forms.Label();
             this.idbox = new System.Windows.Forms.TextBox();
             this.deletebutton = new System.Windows.Forms.Button();
+            this.collegeDBDataSet1 = new CollegeManagementSystem.CollegeDBDataSet1();
+            this.collegeDBDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dobpicker = new System.Windows.Forms.DateTimePicker();
             this.editbutton = new System.Windows.Forms.Button();
             this.addbutton = new System.Windows.Forms.Button();
@@ -54,8 +56,6 @@ namespace CollegeManagementSystem
             this.fNameBox = new System.Windows.Forms.TextBox();
             this.Lname = new System.Windows.Forms.Label();
             this.Fname = new System.Windows.Forms.Label();
-            this.collegeDBDataSet1 = new CollegeManagementSystem.CollegeDBDataSet1();
-            this.collegeDBDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collegeDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collegeDBDataSet1BindingSource)).BeginInit();
@@ -111,7 +111,16 @@ namespace CollegeManagementSystem
             this.deletebutton.TabIndex = 67;
             this.deletebutton.Text = "Delete";
             this.deletebutton.UseVisualStyleBackColor = true;
-            this.deletebutton.Click += new System.EventHandler(this.deletebutton_Click_1);
+            // 
+            // collegeDBDataSet1
+            // 
+            this.collegeDBDataSet1.DataSetName = "CollegeDBDataSet1";
+            this.collegeDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // collegeDBDataSet1BindingSource
+            // 
+            this.collegeDBDataSet1BindingSource.DataSource = this.collegeDBDataSet1;
+            this.collegeDBDataSet1BindingSource.Position = 0;
             // 
             // dobpicker
             // 
@@ -131,7 +140,6 @@ namespace CollegeManagementSystem
             this.editbutton.TabIndex = 66;
             this.editbutton.Text = "Edit";
             this.editbutton.UseVisualStyleBackColor = true;
-            this.editbutton.Click += new System.EventHandler(this.editbutton_Click_1);
             // 
             // addbutton
             // 
@@ -141,7 +149,6 @@ namespace CollegeManagementSystem
             this.addbutton.TabIndex = 65;
             this.addbutton.Text = "Add";
             this.addbutton.UseVisualStyleBackColor = true;
-            this.addbutton.Click += new System.EventHandler(this.addbutton_Click_1);
             // 
             // dob
             // 
@@ -269,16 +276,6 @@ namespace CollegeManagementSystem
             this.Fname.Size = new System.Drawing.Size(65, 23);
             this.Fname.TabIndex = 49;
             this.Fname.Text = "First Name";
-            // 
-            // collegeDBDataSet1
-            // 
-            this.collegeDBDataSet1.DataSetName = "CollegeDBDataSet1";
-            this.collegeDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // collegeDBDataSet1BindingSource
-            // 
-            this.collegeDBDataSet1BindingSource.DataSource = this.collegeDBDataSet1;
-            this.collegeDBDataSet1BindingSource.Position = 0;
             // 
             // StudentForm
             // 

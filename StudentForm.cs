@@ -91,7 +91,7 @@ namespace CollegeManagementSystem
                 return true;
             return false;
         }
-        private void addbutton_Click_1(object sender, EventArgs e)
+        private void addbutton_Click(object sender, EventArgs e)//addes new id and stuff 
         {
             try
             {
@@ -100,37 +100,19 @@ namespace CollegeManagementSystem
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 //command for sql
-<<<<<<< HEAD
-                //command.CommandText = "Insert into students (ID, firstName, lastName, gender, DateOfBirth, email, address, course, startDate) Values (@ID, @firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course, @startDate)";
-                //NO ID CODE
-                command.CommandText = "Insert into students (firstName, lastName, gender, DateOfBirth, email, address, course, startDate) Values (@firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course, @startDate)";
-=======
                 command.CommandText = "Insert into students (firstName, lastName, gender, DateOfBirth, email, address, course, startDate) Values (@firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course,'2020-09-14')";
                 //command.CommandText = "Insert into students (firstName) Values (@firstName)";//Test
 
->>>>>>> e8edcac9a550ba6ebd8877c2a36cfa216a6e2d48
                 //fill parameters
                 command.Parameters.AddWithValue("@firstName", fNameBox.Text);
                 command.Parameters.AddWithValue("@lastName", lNameBox.Text);
-                command.Parameters.AddWithValue("@email", EmailBox.Text);
+                command.Parameters.AddWithValue("@email", email.Text);
                 command.Parameters.AddWithValue("@DateOfBirth", dobpicker.Value.Date);
-<<<<<<< HEAD
-                //left
-                command.Parameters.AddWithValue("@startDate", startdatapicker.Value.Date);
-=======
                 //command.Parameters.AddWithValue("@startDate", startdatapicker.Value.Date);//Test
->>>>>>> e8edcac9a550ba6ebd8877c2a36cfa216a6e2d48
                 command.Parameters.AddWithValue("@gender", genderBox.Text);
                 command.Parameters.AddWithValue("@course", enrolledprogramBox.Text);
                 command.Parameters.AddWithValue("@address", richTextBox1.Text);
-<<<<<<< HEAD
-                //misc //Take out the 2 lines below IF NO ID
-                //if (isIDboxempty()) idbox.Text = RandomStudentID().ToString();
-                //int id = Convert.ToInt32(idbox.Text);
-                //command.Parameters.AddWithValue("@ID", id);
-=======
 
->>>>>>> e8edcac9a550ba6ebd8877c2a36cfa216a6e2d48
 
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -144,7 +126,7 @@ namespace CollegeManagementSystem
             }
         }
 
-        private void editbutton_Click_1(object sender, EventArgs e)
+        private void editbutton_Click(object sender, EventArgs e)//edits the student profile
         {
             if (isIDboxempty())
                 MessageBox.Show("Error: ", "Enter student ID(Top left)");
@@ -182,7 +164,7 @@ namespace CollegeManagementSystem
             }
         }
 
-        private void deletebutton_Click_1(object sender, EventArgs e)
+        private void deletebutton_Click(object sender, EventArgs e)//deletes the student
         {
             if (isIDboxempty())
                 MessageBox.Show("Enter student ID(Top left)", "Error");
