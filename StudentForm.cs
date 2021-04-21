@@ -29,7 +29,6 @@ namespace CollegeManagementSystem
     public partial class StudentForm : Form
     {
         //thanks to Yunna for the Connection Queries help
-
         //DB connection
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\CollegeDB.accdb; Persist Security Info=True");
 
@@ -83,16 +82,26 @@ namespace CollegeManagementSystem
         }
         private void StudentForm_Load(object sender, EventArgs e)
         {
+            /*
+            * This method On load will set the table
+            */
             setTable();//on load it'll set table
         }
         private bool isIDboxempty()//function to check if ID box is null or not
         {
+                /*
+                * This method check is the ID box has text
+                */
             if (idbox.Text == "" || idbox.Text == " ")
                 return true;
             return false;
         }
         private void addbutton_Click(object sender, EventArgs e)//addes new id and stuff 
         {
+            /*
+             * This method Add a new user when click
+             */
+            
             try
             {
                 if (!connection.State.Equals(ConnectionState.Open)) connection.Open();
@@ -101,19 +110,19 @@ namespace CollegeManagementSystem
                 command.Connection = connection;
                 //command for sql
                 command.CommandText = "Insert into students (firstName, lastName, gender, DateOfBirth, email, address, course, startDate) Values (@firstName, @lastName, @gender, @DateOfBirth, @email, @address, @course,'2020-09-14')";
-                //command.CommandText = "Insert into students (firstName) Values (@firstName)";//Test
+                //command.CommandText = "Insert into students (firstName) Values (@firstName)";//Test var
 
                 //fill parameters
                 command.Parameters.AddWithValue("@firstName", fNameBox.Text);
                 command.Parameters.AddWithValue("@lastName", lNameBox.Text);
                 command.Parameters.AddWithValue("@email", email.Text);
                 command.Parameters.AddWithValue("@DateOfBirth", dobpicker.Value.Date);
-                //command.Parameters.AddWithValue("@startDate", startdatapicker.Value.Date);//Test
+                //command.Parameters.AddWithValue("@startDate", startdatapicker.Value.Date);//Test Parameter
                 command.Parameters.AddWithValue("@gender", genderBox.Text);
                 command.Parameters.AddWithValue("@course", enrolledprogramBox.Text);
                 command.Parameters.AddWithValue("@address", richTextBox1.Text);
 
-
+                //Executes the Query
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Successfully Added");
@@ -128,6 +137,9 @@ namespace CollegeManagementSystem
 
         private void editbutton_Click(object sender, EventArgs e)//edits the student profile
         {
+            /*
+           * This method edits a user when clicked but the ID box has to have a number in it
+           */
             if (isIDboxempty())
                 MessageBox.Show("Error: ", "Enter student ID(Top left)");
             else
@@ -151,7 +163,9 @@ namespace CollegeManagementSystem
                         + "' WHERE ID = "
                         + idbox.Text + "";
 
+                    //Executes the Query
                     command.ExecuteNonQuery();
+                    //closes the connection once done
                     connection.Close();
                     MessageBox.Show("Successfully Edited");
 
@@ -166,6 +180,9 @@ namespace CollegeManagementSystem
 
         private void deletebutton_Click(object sender, EventArgs e)//deletes the student
         {
+            /*
+            * This method deletes a user when clicked but the ID box has to have a number in it
+            */
             if (isIDboxempty())
                 MessageBox.Show("Enter student ID(Top left)", "Error");
             else
@@ -179,7 +196,9 @@ namespace CollegeManagementSystem
                     command.CommandText = "DELETE FROM students WHERE ID = "
                         + idbox.Text + "";
 
+                    //Executes the Query
                     command.ExecuteNonQuery();
+                    //closes the connection once done          
                     connection.Close();
                     MessageBox.Show("Successfully Deleted");
                     setTable();
