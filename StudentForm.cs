@@ -91,7 +91,7 @@ namespace CollegeManagementSystem
                 return true;
             return false;
         }
-        private void addbutton_Click(object sender, EventArgs e)//addes new id and stuff 
+        private void addbutton_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -126,7 +126,7 @@ namespace CollegeManagementSystem
             }
         }
 
-        private void editbutton_Click(object sender, EventArgs e)//edits the student profile
+        private void editbutton_Click_1(object sender, EventArgs e)
         {
             if (isIDboxempty())
                 MessageBox.Show("Error: ", "Enter student ID(Top left)");
@@ -164,7 +164,7 @@ namespace CollegeManagementSystem
             }
         }
 
-        private void deletebutton_Click(object sender, EventArgs e)//deletes the student
+        private void deletebutton_Click_1(object sender, EventArgs e)
         {
             if (isIDboxempty())
                 MessageBox.Show("Enter student ID(Top left)", "Error");
